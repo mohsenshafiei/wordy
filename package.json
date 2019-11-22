@@ -1,0 +1,34 @@
+{
+  "name": "wordy",
+  "version": "0.0.1",
+  "description": "generate meaningful word with alphabets.",
+  "main": "index.js",
+  "bin": {
+    "wordy": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "chmod +x index.js && sudo npm unlink && sudo npm link",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mohsenshafiei/wordy.git"
+  },
+  "keywords": [
+    "words",
+    "cross-word",
+    "puzzle",
+    "secrets"
+  ],
+  "author": "mohsenshafiei (mohsenshafieitafreshi@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohsenshafiei/wordy/issues"
+  },
+  "homepage": "https://github.com/mohsenshafiei/wordy#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "wordpos": "^1.2.0"
+  }
+}
