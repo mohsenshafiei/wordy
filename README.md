@@ -5,10 +5,6 @@ Solve English Word Games Easily
 ```bash
 npm install @mohsenshafiei/wordy
 ```
-- To start using application
-```bash
-$ npm run build
-```
 - to use wordy:
 ```bash
 wordy <alphabets> <minimum-length>
