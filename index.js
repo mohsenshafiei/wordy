@@ -5,7 +5,8 @@ const WordPOS = require("wordpos");
 const wordpos = new WordPOS()
 
 const args = minimist(process.argv.slice(2));
-const alphabets = args._[0]
+const alphabets = args._[0];
+const minLength = args._[1];
 const stringPermutations = str => {
   if (str.length <= 2) return str.length === 2 ? [str, str[1] + str[0]] : [str];
   return str
@@ -22,4 +23,4 @@ const isVerb = async (str) => await wordpos.isVerb(str);
 const isAdjective = async (str) => await wordpos.isAdjective(str);
 const isAdverb = async (str) => await wordpos.isAdverb(str);
 const isMeaningful = (str) => isNoun(str) || isVerb(str) || isAdjective(str) || isAdverb(str);
-generate(alphabets).map((str) => str.length > 2 ? stringPermutations(str).map(async word => await isMeaningful(word) ? console.log(word): null) : null) ;
+generate(alphabets).map((str) => str.length > minLength ? stringPermutations(str).map(async word => await isMeaningful(word) ? console.log(word): null) : null) ;
