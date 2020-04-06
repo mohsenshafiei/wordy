@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mohsenshafiei/wordy#readme",
   "dependencies": {
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "wordpos": "^1.2.0"
   }
 }
